@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reply-mapper">
+	<insert id="insert_reply">
+	insert into shop_reply values(reply_seq.nextval,#{shop_seq},#{writer},#{contents})
+	</insert>
+	<select id="select_reply" resultType="kh.spring.DTO.ReplyDTO">
+	select * from shop_reply where shop_seq = ${value}
+	</select>
+
+
+</mapper>
